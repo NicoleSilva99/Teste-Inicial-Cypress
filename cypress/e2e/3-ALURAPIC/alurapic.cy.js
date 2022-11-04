@@ -79,4 +79,25 @@ describe('Testes na pagina Alura Pic', () => {
         cy.contains('ap-vmessage', 'Must be lower case').should('be.visible');
     })
 
+    
+    it('Tentativa login invalido', () => {
+        //defaultCommandTimeout: 10000
+        cy.login('flavio', '12a');
+        cy.on('window:alert', (str) => {
+        expect(str).to.equal('Invalid user name or password')
+        });
+    })  
+
+    it('Tentativa login correto', () => {
+        //defaultCommandTimeout: 10000
+        cy.login('flavio', '123');
+        cy.contains('a', '(Logout)').should('be.visible');
+    })  
+
+    it.only('Tentativa registro correto', () => {
+        //defaultCommandTimeout: 10000
+        cy.register('nicole1431@hotmail.com', 'Nicole Silva', 'nicsilva1999', '1234567@');
+        cy.contains('h4', 'Login').should('be.visible');
+    })  
+
 })
