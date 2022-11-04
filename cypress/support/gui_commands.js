@@ -12,7 +12,7 @@ Cypress.Commands.add('register', (email, fullname, username, senha) => {
     cy.get('input[formcontrolname="email"]').type(email);
     cy.get('input[formcontrolname="fullName"]').type(fullname);
     cy.get('input[formcontrolname="userName"]').type(username);
-    cy.contains('small', 'User available').should('be.visible');
     cy.get('input[formcontrolname="password"]').type(senha);
+    cy.contains('small', 'User available').should('be.visible');
     cy.contains('button', 'Register').click();
 })

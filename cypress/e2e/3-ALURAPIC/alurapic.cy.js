@@ -94,10 +94,20 @@ describe('Testes na pagina Alura Pic', () => {
         cy.contains('a', '(Logout)').should('be.visible');
     })  
 
-    it.only('Tentativa registro correto', () => {
+    //jeito anterior, sem massa de dados em JSON
+    /*it.only('Tentativa registro correto', () => {
         //defaultCommandTimeout: 10000
         cy.register('nicole1431@hotmail.com', 'Nicole Silva', 'nicsilva1999', '1234567@');
         cy.contains('h4', 'Login').should('be.visible');
-    })  
+    }) */ 
+
+    const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario => {
+        it.only('Tentativa registro correto', () => {
+            //defaultCommandTimeout: 10000
+            cy.register(usuario.email, usuario.fullName, usuario.userName, usuario.password);
+            cy.contains('h4', 'Login').should('be.visible');
+        })  
+    })
 
 })
