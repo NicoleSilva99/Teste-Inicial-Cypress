@@ -11,7 +11,7 @@ describe('Verifica fotos após login', () => {
         })
     })
 
-    it.only('Fazer login com usuário especifico', () => {
+    it('Fazer login com usuário especifico', () => {
         cy.request({
             method: 'POST',
             url: 'https://apialurapic.herokuapp.com/user/login',

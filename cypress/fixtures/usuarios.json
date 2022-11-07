@@ -2,28 +2,28 @@
     {
         "email": "nicole@hotmail.com",
         "fullName": "Nicole Silva",
-        "userName": "nic-ska",
+        "userName": "nic-ska3",
         "password": "teste12345"
     },
     
     {
         "email": "andre@gmail",
         "fullName": "Andre dos Santos Dias",
-        "userName": "andre-ska",
+        "userName": "andre-ska3",
         "password": "blablablasenha"
     },
     
     {
         "email": "anderson@hotmail.com.br",
         "fullName": "Anderson Possamai Jorge",
-        "userName": "ander-ska",
+        "userName": "ander-ska3",
         "password": "VemBrilhar123@"
     },
     
     {
         "email": "giuliano-peixoto-garcia@outlook.com",
         "fullName": "Giuliano Peixinho Garcia",
-        "userName": "peixinho-ska",
+        "userName": "peixinho-ska3",
         "password": "Kamily123"
     }
 ]
